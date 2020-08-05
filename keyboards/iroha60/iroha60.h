@@ -27,9 +27,21 @@
  * represents the switch matrix.
  */
 #define LAYOUT( \
-    k00, k01, k02, \
-      k10,  k12    \
-) { \
-    { k00, k01,   k02 }, \
-    { k10, KC_NO, k12 }  \
+  L00, L01, L02, L03, L04, L05, L06,    R00, R01, R02, R03, R04, R05, R06, R07, \
+       L11, L12, L13, L14, L15, L16,    R10, R11, R12, R13, R14, R15, R16, R17, \
+       L21, L22, L23, L24, L25, L26,         R21, R22, R23, R24, R25, R26, R27, \
+       L31, L32, L33, L34, L35, L36,         R31, R32, R33, R34, R35, R36, R37, \
+                      L44, L45, L46,         R41, R42, R43, R44 \
+) \
+{ \
+  { L00  , L01,   L02,   L03,   L04, L05,   L06,   KC_NO }, \
+  { KC_NO, L11,   L12,   L13,   L14, L15,   L16,   KC_NO }, \
+  { KC_NO, L21,   L22,   L23,   L24, L25,   L26,   KC_NO }, \
+  { KC_NO, L31,   L32,   L33,   L34, L35,   L36,   KC_NO }, \
+  { KC_NO, KC_NO, KC_NO, KC_NO, L44, L45,   L46,   KC_NO }, \
+  { R00,   R01,   R02,   R03,   R04, R05,   R06,   R07   }, \
+  { R10,   R11,   R12,   R13,   R14, R15,   R16,   R17   }, \
+  { KC_NO, R21,   R22,   R23,   R24, R25,   R26,   R27   }, \
+  { KC_NO, R31,   R32,   R33,   R34, R35,   R36,   R37   }, \
+  { KC_NO, R41,   R42,   R43,   R44, KC_NO, KC_NO, KC_NO }, \
 }
